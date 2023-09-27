@@ -18,12 +18,12 @@ name_attribute = [
 df = pd.DataFrame(columns=name_attribute, data=target_price)
 
 
-filename = f'C:\python training\sideproject -stocktw\\{target_stock}.csv'
+filename = f'./data/{target_stock}.csv'
 #指定Data Frame轉存csv檔案的檔名與路徑
 
 df.to_csv(filename)
 
-df = pd.read_csv(f'C:\python training\sideproject -stocktw\\{target_stock}.csv', parse_dates=True, index_col=1) #讀取目標股票csv檔的位置
+df = pd.read_csv(f'./data/{target_stock}.csv', parse_dates=True, index_col=1) #讀取目標股票csv檔的位置
 
 df.rename(columns={'Turnover':'Volume'}, inplace = True) 
 
